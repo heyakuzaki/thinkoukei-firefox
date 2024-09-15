@@ -10,3 +10,67 @@
 * Author: Shin Tamaki
 * License: MPL-2.0
 *******************************************************************************/
+:root {
+  --border-radius-large: 16px;
+  --chrome-gap: 8px;
+  --chrome-color: ActiveCaption;
+  
+  &:-moz-window-inactive {
+    --chrome-color: InActiveCaption;
+  }
+}
+
+/* ----- Navigator Toolbox ----- */
+#navigator-toolbox {
+  overflow: clip;
+  max-height: var(--chrome-gap);/**/
+  padding-top: var(--chrome-gap);
+  border: none !important;
+  transition: max-height 800ms ease-in-out 50ms, padding-top 50ms ease 550ms !important; /* add transition */
+  
+  &:focus,
+  &:hover {
+    max-height: 100vh;
+    padding-top: initial;
+    transition: max-height 700ms ease-in-out 0ms !important;
+  }
+}
+
+/* ----- URL Bar -----*/
+#urlbar-container {
+  justify-content: center;
+}
+
+#urlbar {
+  width: 40vw !important;
+  transition: width 150ms ease-in-out !important;
+  
+  #urlbar-background {
+    border-radius: var(--border-radius-large) !important;
+  }
+  
+  &[breakout-extend] {
+    z-index: 999 !important;
+    position: fixed !important;
+    top: 96px !important;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 70vw !important;
+    
+    #urlbar-background {
+      border-radius: var(--border-radius-large) !important; /**/
+    }
+  }
+}
+
+/* ----- Browser Content -----*/
+#appcontent browser {
+  border-radius: var(--border-radius-large) !important;
+  border: 0.01px solid ThreeDShadow;
+}
+
+.browserContainer {
+  background-color: var(--chrome-color);/**/
+  padding: 0 var(--chrome-gap) var(--chrome-gap);
+}

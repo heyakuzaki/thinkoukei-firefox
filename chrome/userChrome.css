@@ -36,6 +36,18 @@
   }
 }
 
+/* ----- Tabs Toolbar -----*/
+#tabbrowser-tabs {
+  border: none !important;
+}
+
+
+/* ----- Nav Toolbar -----*/
+#nav-bar{
+  --toolbar-bgcolor: var(--chrome-color);
+  padding: var(--space-small) 0 !important;
+}
+
 /* ----- URL Bar -----*/
 #urlbar-container {
   justify-content: center;
@@ -61,8 +73,24 @@
     #urlbar-background {
       border-radius: var(--border-radius-large) !important; /**/
     }
+    
+    .urlbar-input-container {
+      height: 4.5rem !important; /**/
+      & > :is(box, image) {
+        height: 100% !important;
+      }
+      #urlbar-input {
+        font-size: 2.25rem !important;
+      }
+    }
   }
 }
+
+/* ----- Personal Toolbar -----*/
+#PersonalToolbar {
+  --toolbar-bgcolor: var(--chrome-color);
+}
+
 
 /* ----- Browser Content -----*/
 #appcontent browser {

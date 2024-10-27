@@ -10,6 +10,8 @@
 * Author: Shin Tamaki
 * License: MPL-2.0
 *******************************************************************************/
+@import url("modules/privatebrowsingmode.css");
+
 :root {
   --border-radius-large: 16px;
   --chrome-gap: 8px;

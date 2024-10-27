@@ -1,0 +1,25 @@
+/*******************************************************************************
+* userChrome-privatebrowsing.css
+* Version: v0.1 | Last Updated: 2024-09-09 | Works with Firefox 110.0
+*
+* This CSS file contains customizations for Firefox's private browsing mode.
+* Aimed to enhance the visual experience while browsing privately, ensuring
+* a distinct and immersive interface that feels tailored and polished.
+* See: https://github.com/heyakuzaki/thinkoukei-firefox
+*
+* Author: Shin Tamaki
+* License: MPL-2.0
+*******************************************************************************/
+
+#main-window[privatebrowsingmode="temporary"] {
+    --chrome-color: #310052; /*#1E0032/**/
+    --tab-selected-bgcolor: rgba(35, 0, 60, 0.7) !important;
+    
+    #navigator-toolbox {
+      background-color: var(--chrome-color) !important;
+    }
+    #urlbar-background {
+      background-color: var(--chrome-color) !important;
+    }
+  }
+  

@@ -18,8 +18,8 @@
     #navigator-toolbox {
       background-color: var(--chrome-color) !important;
     }
+    
     #urlbar-background {
       background-color: var(--chrome-color) !important;
     }
-  }
-  
+}

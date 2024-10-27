@@ -13,20 +13,13 @@
 @import url("modules/privatebrowsingmode.css");
 
 :root {
-  --border-radius-large: 16px;
-  --chrome-gap: 8px;
-  --chrome-color: ActiveCaption;
-  
-  &:-moz-window-inactive {
-    --chrome-color: InActiveCaption;
-  }
 }
 
 /* ----- Navigator Toolbox ----- */
 #navigator-toolbox {
   overflow: clip;
-  max-height: var(--chrome-gap);/**/
-  padding-top: var(--chrome-gap);
+  max-height: var(--space-small);/**/
+  padding-top: var(--space-small);
   border: none !important;
   transition: max-height 800ms ease-in-out 50ms, padding-top 50ms ease 550ms !important; /* add transition */
   
@@ -46,8 +39,8 @@
 
 /* ----- Nav Toolbar -----*/
 #nav-bar{
-  --toolbar-bgcolor: var(--chrome-color);
-  padding: var(--space-small) 0 !important;
+  background-color: transparent !important;
+  padding: var(--space-xsmall) 0 !important;
 }
 
 /* ----- URL Bar -----*/
@@ -60,7 +53,7 @@
   transition: width 150ms ease-in-out !important;
   
   #urlbar-background {
-    border-radius: var(--border-radius-large) !important;
+    border-radius: var(--border-radius-circle) !important;
   }
   
   &[breakout-extend] {
@@ -73,11 +66,11 @@
     width: 70vw !important;
     
     #urlbar-background {
-      border-radius: var(--border-radius-large) !important; /**/
+      border-radius: var(--border-radius-medium) !important;
     }
     
     .urlbar-input-container {
-      height: 4.5rem !important; /**/
+      height: 4.5rem !important;
       & > :is(box, image) {
         height: 100% !important;
       }
@@ -90,17 +83,20 @@
 
 /* ----- Personal Toolbar -----*/
 #PersonalToolbar {
-  --toolbar-bgcolor: var(--chrome-color);
+  background: transparent !important;
 }
-
 
 /* ----- Browser Content -----*/
 #appcontent browser {
-  border-radius: var(--border-radius-large) !important;
+  border-radius: var(--border-radius-medium) !important;
   border: 0.01px solid ThreeDShadow;
 }
 
 .browserContainer {
-  background-color: var(--chrome-color);/**/
-  padding: 0 var(--chrome-gap) var(--chrome-gap);
+  background-color: var(--toolbox-non-lwt-bgcolor);
+  padding: 0 var(--space-small) var(--space-small);
+  
+  &:-moz-window-inactive {
+    background-color: var(--toolbox-non-lwt-bgcolor-inactive);
+  }
 }

@@ -15,10 +15,16 @@
 :root {
 }
 
+.titlebar-buttonbox-container {
+  padding: 0 12px;
+}
+
+.titlebar-spacer { display: none; }
+
 /* ----- Navigator Toolbox ----- */
 #navigator-toolbox {
   overflow: clip;
-  max-height: var(--space-small);/**/
+  max-height: var(--space-small);
   padding-top: var(--space-small);
   border: none !important;
   transition: max-height 800ms ease-in-out 50ms, padding-top 50ms ease 550ms !important; /* add transition */
@@ -41,6 +47,7 @@
 #nav-bar{
   background-color: transparent !important;
   padding: var(--space-xsmall) 0 !important;
+  border: none !important;  
 }
 
 /* ----- URL Bar -----*/
@@ -88,9 +95,10 @@
 
 /* ----- Browser Content -----*/
 #appcontent browser {
-  border-radius: var(--border-radius-medium) !important;
+  border-radius: calc(1.5 * var(--border-radius-medium));
   border: 0.01px solid ThreeDShadow;
 }
+
 
 .browserContainer {
   background-color: var(--toolbox-non-lwt-bgcolor);

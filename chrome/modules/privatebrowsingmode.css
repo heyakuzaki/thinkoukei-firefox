@@ -12,14 +12,13 @@
 *******************************************************************************/
 
 #main-window[privatebrowsingmode="temporary"] {
-    --chrome-color: #310052; /*#1E0032/**/
-    --tab-selected-bgcolor: rgba(35, 0, 60, 0.7) !important;
-    
-    #navigator-toolbox {
-      background-color: var(--chrome-color) !important;
-    }
-    
-    #urlbar-background {
-      background-color: var(--chrome-color) !important;
-    }
+    --tab-selected-bgcolor: rgba(255, 255, 255, 0.2) !important;
+    --toolbox-non-lwt-bgcolor: #310052 !important;
+    --toolbox-non-lwt-bgcolor-inactive: #1E0032 !important;
+    --toolbar-field-focus-background-color: #310052 !important; 
 }
+
+#private-browsing-indicator-with-label label {
+  display: none;
+}
+  

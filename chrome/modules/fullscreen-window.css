@@ -1,0 +1,44 @@
+/*******************************************************************************
+* fullscreen-window.css
+* Version: v0.1 | Last Updated: 2024-12-06 | Works with Firefox 133.0
+*
+* Minor UI tweaks and fixes for Firefox Fullscreen Mode 
+* Applies when maximizing the window is disabled i.e. when 
+* full-screen-api.ignore-widgets option in about:config is set to true.
+* See: https://github.com/heyakuzaki/thinkoukei-firefox
+*
+* Author: Shin Tamaki
+* License: MPL-2.0
+*******************************************************************************/
+#navigator-toolbox, .browserContainer, .browserContainer browser { 
+    transition: all 600ms cubic-bezier(0.4, -0.6, 0.2, 1.6) 0ms !important;
+}
+
+:root[inFullscreen] {
+    #navigator-toolbox {  
+        border-bottom: none !important;
+        
+        &:hover {
+            margin: initial !important;
+        }
+    }
+    
+    #urlbar[breakout][breakout-extend] {
+        /* Fixes mispositioning due to transition */
+        top: var(--urlbar-container-height) !important;
+    }
+    
+    #PersonalToolbar {
+        /* Show toolbar even in full-screen mode*/
+        visibility: visible !important;
+    }
+    
+    .browserContainer {
+        padding: var(--space-small);
+        background-color: var(--toolbox-non-lwt-bgcolor);
+        &:-moz-window-inactive { background-color: var(--toolbox-non-lwt-bgcolor-inactive);}
+        
+        browser {border-radius: var(--border-radius-medium);}
+    }
+}
+

@@ -1,6 +1,6 @@
 /*******************************************************************************
 * userChrome.css
-* Version: v0.1 | Last Updated: 2024-09-09 | Works with Firefox 110.0
+* Version: v0.x | Last Updated: 2024-12-01 | Works with Firefox 133.0
 *
 * This is the main CSS file for personalising the Firefox chrome.
 * Aimed to deliver a transformed browsing experience where every interaction 
@@ -10,3 +10,4 @@
 * Author: Shin Tamaki
 * License: MPL-2.0
 *******************************************************************************/
+@import url("modules/fullscreen-window.css");
